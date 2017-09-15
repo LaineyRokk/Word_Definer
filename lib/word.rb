@@ -17,5 +17,9 @@ class Word
     @@word_list.push(self)
   end
 
+  def self.clear()
+    @@word_list = []
+  end
+
 
 end
