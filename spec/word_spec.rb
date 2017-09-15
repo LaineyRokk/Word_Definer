@@ -29,3 +29,27 @@ describe(".clear") do
     expect(Word.all()).t0(eq([]))
   end
 end
+
+describe("#definition") do
+  it("returns an empty arrray at first") do
+    example_word = Word.new("arcanum")
+    expect(example_word.definition).to(eq([]))
+  end
+end
+
+describe("#add_definition") do
+    it("adds a new definition to the word") do
+      example_word = Word.new("love")
+      example_definition = Definition.new("secret of secrets")
+      example_word.add_definition(example_definition)
+      expect(example_word.definitions()).to(eq([example_definition]))
+    end
+  end
+
+describe("#id") do
+  it("assigns and id number that is +1 of the position in the array") do
+    example_word = Word.new("arcanum")
+    example_word.save()
+    expect(example_word.id()).to(ea(1))
+  end
+end

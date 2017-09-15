@@ -21,5 +21,17 @@ class Word
     @@word_list = []
   end
 
+  def definition()
+    @definition
+  end
+
+  def add_definition()
+    @definition.push(definition)
+  end
+
+  def id()
+    @id
+  end
+
 
 end
